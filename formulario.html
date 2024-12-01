@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="reset.css">
+   <link rel="stylesheet" href="estilos.css">
+    <title>Envio de formulario con fetch y formsubmit</title>
+</head>
+<body>
+    <section id="Section13" class="section" data-scroll-spy>
+        <h2>formulario de contacto</h2>
+        
+    <form class="formulario">
+    
+        <legend>Envianos tus comentarios</legend>
+        <input class="txt"  type="text" placeholder="Escribe tu nombre" name="nombre" title="Nombre solo acepta letras y espacios en blanco" pattern="^[A-ZñÑa-záéíóúÁÉÍÓÚ\s]+$" required>
+        <input class="txt" type="email" placeholder="Escribe tu email" name="email" title="El email no es válido" pattern="^[a-zA-Z0-9]+(\.[_a-zA-Z0-9]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*(\.[a-zA-Z]{2,15})$"  required>
+        <input class="txt" type="text" placeholder="Asunto a tratar"  name="subject" title="El asunto no es válido" required>
+        <textarea class="txt" name="commments" placeholder="Escribe tus comentarios" cols="50" rows="5" title="El campo tiene mas de 255 caracteres" data-pattern="^.{1,255}$" required></textarea>          <!-- no acepta patron por eso se le agreg data- -->
+
+        <input type="submit" value="Enviar" class="enviar">
+        <div class="contact-form-loader none ">
+            <img src="oval.svg" alt="loader">
+        </div>
+        <div class="contact-response none"> 
+          
+        </div>
+
+    </form>
+        <div class=""></div>
+    </section>  
+
+    <script src="formulario.js"></script>
+</body>
+</html>
